@@ -141,6 +141,92 @@
             color: rgb(0, 0, 0); 
             animation: glow 1.5s infinite alternate;
         }
+
+        /* Mobile responsiveness adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px !important; /* Adjust font size for mobile */
+    }
+
+    .section {
+        padding: 15px !important; /* Reduce padding on mobile devices */
+    }
+
+    .section-content h1 {
+        font-size: 3.5rem !important; /* Make title smaller for mobile */
+    }
+
+    .section-content h2 {
+        font-size: 2rem !important; /* Adjust subtitle size */
+    }
+
+    .content-boxes {
+        display: flex !important;
+        flex-direction: column !important; /* Stack the rows vertically */
+        align-items: center !important; /* Center the rows horizontally */
+        gap: 15px !important; /* Add a gap between the rows */
+    }
+
+    .row {
+        display: flex !important;
+        flex-direction: column !important; /* Stack boxes within a row vertically */
+        align-items: center !important; /* Center the boxes */
+        gap: 15px !important; /* Add a gap between the boxes */
+        width: 100% !important; /* Ensure rows take full width */
+    }
+
+    .box {
+        width: 85% !important; /* Ensure the boxes take up more space on mobile */
+        max-width: 90% !important; /* Restrict max width for smaller screens */
+        padding: 15px !important; /* Add padding for better spacing inside the boxes */
+        text-align: center !important; /* Center text inside each box */
+        box-sizing: border-box !important; /* Ensure padding doesn't affect width */
+    }
+
+    /* Revolution features adjustments */
+    #features .section-content {
+        text-align: center !important; /* Center text alignment */
+    }
+}
+
+/* Further tweaks for small mobile screens (less than 480px) */
+@media (max-width: 480px) {
+    .section-content h1 {
+        font-size: 2.5rem !important; /* Smaller title size */
+    }
+
+    .section-content h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .row {
+        flex-direction: column !important; /* Stack boxes in single column */
+    }
+
+    .box {
+        width: 100% !important;  /* Full width on smaller devices */
+        max-width: 480px !important; /* Max width adjusted for smaller screens */
+        margin: 5px 0 !important;  /* Adjust margins between the boxes */
+        padding: 10px !important;  /* Adjust padding */
+    }
+
+/* Ensure the Schedule Consultation button is centered in the home section */
+#home .section-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Center everything inside this container */
+    justify-content: center !important; /* Vertically center */
+    text-align: center !important; /* Center text as well */
+    padding: 0 15px !important; /* Optional padding adjustments */
+}
+
+#home .btn {
+    width: auto !important; /* Ensure button width is as required */
+    font-size: 1.5rem !important; /* Make the button slightly larger for emphasis */
+    margin-top: 20px !important; /* Add some space above the button */
+}
+}
+
     </style>
 </head>
 <body>
@@ -267,5 +353,37 @@
             canvas.height = window.innerHeight;
         });
     </script>
+
+<script>
+    // JavaScript to change the text on mobile devices
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if the screen width is below 768px (mobile size)
+        if (window.innerWidth <= 768) {
+            // Change the title "Grow With Techtuality AI" to "Grow With Us"
+            const title = document.querySelector('h1');
+            if (title && title.innerText.trim() === 'Grow With Techtuality AI') {
+                title.innerText = 'Grow With Us';
+            }
+
+            // Change "Revolutionary Features" to "Features"
+            const revolutionTitle = document.querySelector('h1');
+            const revolutionText = document.querySelectorAll('h1');
+            revolutionText.forEach(h1 => {
+                if (h1.innerText.trim() === 'Revolutionary Features') {
+                    h1.innerText = 'Features';
+                }
+            });
+
+            // Change "Key Benefits" to "Benefits"
+            const benefitTitle = document.querySelectorAll('h1');
+            benefitTitle.forEach(h1 => {
+                if (h1.innerText.trim() === 'Key Benefits') {
+                    h1.innerText = 'Benefits';
+                }
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
