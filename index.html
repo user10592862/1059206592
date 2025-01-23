@@ -91,6 +91,51 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Mobile responsiveness adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .btn {
+        font-size: 1.25rem !important;
+        padding: 10px 25px !important;
+        margin: 25px;
+        width: 80%;
+    }
+
+    #content {
+        padding: 5px;
+    }
+}
+
+/* Small mobile screen adjustments (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 1.1rem !important;
+        padding: 10px 25px !important;
+        margin: 10px;
+    }
+
+    #content {
+        padding: 5px;
+    }
+}
+</style>
     </style>
 </head>
 <body>
@@ -98,7 +143,7 @@
         <canvas id="matrix"></canvas>
         <div id="content">
             <h1>Techtuality AI</h1>
-            <h2>Your Empowerment with Advanced AI & Technology Solutions</h2>
+            <h2>Empowerment with Advanced AI & Technology Solutions</h2>
             <button class="btn" onclick="window.location.href='discover-more.html'">Discover More</button>
             <button class="btn" onclick="window.location.href='schedule-consultation.html'">Schedule Consultation</button>
         </div>
@@ -141,6 +186,7 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+
     </script>
 </body>
 </html>
