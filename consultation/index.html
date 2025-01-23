@@ -128,7 +128,83 @@
             100% {
                 box-shadow: 0 0 30px #ff6347, 0 0 50px #ff6347;
             }
+
         }
+
+/* Mobile Responsiveness - Center Align Everything */
+@media (max-width: 768px) {
+    body, .section, #content, #form-section {
+        display: flex;
+        flex-direction: column; /* Stacks elements vertically */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller font size */
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.3rem; /* Adjust text size */
+        max-width: 90%; /* Adjust max width for readability */
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        margin-top: 20px; /* Proper spacing between sections */
+    }
+
+    form {
+        width: 100%; /* Full width for the form */
+        max-width: 90%; /* Maximize usage of space on mobile */
+        padding: 20px;
+        margin-top: 20px; /* Added margin for spacing */
+        border-radius: 8px; /* Slight roundness for form */
+    }
+
+    form label {
+        font-size: 1.2rem; /* Better readable size */
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+        padding: 12px;
+        margin-bottom: 15px; /* Adjusted margin for better spacing */
+    }
+
+    form button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
     </style>
 </head>
 <body>
