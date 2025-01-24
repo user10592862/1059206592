@@ -148,6 +148,10 @@
         font-size: 14px !important; /* Adjust font size for mobile */
     }
 
+    #home h1 {
+    margin-bottom: 20px !important; /* Reduce gap between the title and subtitle */
+}
+
     .section {
         padding: 15px !important; /* Reduce padding on mobile devices */
     }
@@ -191,40 +195,45 @@
 
 /* Further tweaks for small mobile screens (less than 480px) */
 @media (max-width: 480px) {
+    /* Align h1 and h2 title sizes with second page */
     .section-content h1 {
-        font-size: 2.5rem !important; /* Smaller title size */
+        font-size: 2rem !important;  /* Match font size with second page */
+        margin-bottom: 15px !important; /* Align margin with second page */
     }
 
     .section-content h2 {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;  /* Adjust size for smaller screen */
+        margin-top: 0 !important;  /* Align margins to reduce space */
     }
 
+    /* Ensure the Schedule Consultation button is centered */
+    #home .section-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0 15px !important;  /* Padding adjustments to fit similar style */
+    }
+
+    /* Update button style to match the second page */
+    #home .btn {
+        font-size: 1rem !important; /* Ensure button text size matches second page */
+        padding: 10px 20px !important; /* Adjust padding */
+        margin-top: 20px !important;
+    }
+
+    /* Box layout adjustments */
     .row {
-        flex-direction: column !important; /* Stack boxes in single column */
+        flex-direction: column !important;
     }
 
     .box {
-        width: 100% !important;  /* Full width on smaller devices */
-        max-width: 480px !important; /* Max width adjusted for smaller screens */
-        margin: 5px 0 !important;  /* Adjust margins between the boxes */
-        padding: 10px !important;  /* Adjust padding */
+        width: 100% !important; /* Full width on smaller screens */
+        max-width: 480px !important; /* Max width adjusted for consistency */
+        margin: 5px 0 !important;  /* Adjust spacing between boxes */
+        padding: 10px !important;  /* Consistent padding for small screens */
     }
-
-/* Ensure the Schedule Consultation button is centered in the home section */
-#home .section-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Center everything inside this container */
-    justify-content: center !important; /* Vertically center */
-    text-align: center !important; /* Center text as well */
-    padding: 0 15px !important; /* Optional padding adjustments */
-}
-
-#home .btn {
-    width: auto !important; /* Ensure button width is as required */
-    font-size: 1.5rem !important; /* Make the button slightly larger for emphasis */
-    margin-top: 20px !important; /* Add some space above the button */
-}
 }
 
     </style>
@@ -237,7 +246,8 @@
         <div class="section-content">
             <h1>Grow With Techtuality AI</h1>
             <h2>Your Portal to Cutting-Edge AI Innovation</h2>
-            <button class="btn" onclick="window.location.href='/consultation/'">Schedule Consultation</button>        </div>
+            <button class="btn" onclick="window.location.href='schedule-consultation.html'">Schedule Consultation</button>
+        </div>
     </div>
 
     <!-- About Us Section -->
