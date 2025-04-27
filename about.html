@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Techtuality Global</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Header.png" alt="Techtuality Global Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                    <li class="header-contact"><a href="https://calendly.com/techtuality-info/30min" class="btn btn-contact" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section (Same as Homepage) -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building the Future of Technology</h1>
+                <p>We are redefining possibilities with AI and automation</p>
+                <div class="hero-buttons">
+                    <a href="#our-story" class="btn btn-primary">Our Journey</a>
+                    <a href="#our-founder" class="btn btn-secondary">Meet Our Founder</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down" onclick="document.querySelector('#our-story').scrollIntoView({ behavior: 'smooth' })">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="about-teaser">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>2022 - Founded</h3>
+                    <p>Started in the San Francisco Bay Area with a vision to democratize AI technology.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>2024 - Breakthrough</h3>
+                    <p>Developed our first proprietary AI algorithms that outperformed industry benchmarks.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>2025 - Global Reach</h3>
+                    <p>Expanded to serve clients in over 25 countries across 4 continents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section (Sole Proprietor) -->
+    <section id="our-founder" class="founder-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet The Founder</h2>
+            </div>
+            <div class="founder-card">
+                <div class="founder-photo-container">
+                    <img src="images/FangHeadshot.png" alt="Founder">
+                </div>
+                <h3>Jason Fang</h3>
+                <p class="position">Founder & Sole Proprietor</p>
+                <p class="bio">
+                    I founded Techtuality Global to revolutionize businesses with innovative technology solutions. With expertise in machine learning, process automation, and technical innovation, I help organizations harness technology to solve complex challenges, improve efficiency, and drive sustainable growth in the digital age.
+                </p>
+                <div class="founder-credentials">
+                    <div class="credential">
+                        <p>Machine Learning Expert</p>
+                    </div>
+                    <div class="credential">
+                        <p>AI Specialist</p>
+                    </div>
+                    <div class="credential">
+                        <p>Automation Expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="about-teaser">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We challenge the status quo and push technological boundaries daily</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>Ethical AI development is at the core of our business practices</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Impact</h3>
+                    <p>We measure success by the positive change we create in the world</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Same as Homepage) -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to explore solutions for your growth?</h2>
+            <p>Schedule a free consultation to discuss how we can help.</p>
+            <a href="https://calendly.com/techtuality-info/30min" class="btn btn-primary" target="_blank">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer Section (Same as Homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-company-name">Techtuality Global</h3>
+                    <p>Innovating at the intersection of technology and humanity to create a better future.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/techtuality-systems/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:info@techtuality.xyz"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="hackathons.html">Hackathons</a></li>
+                        <li><a href="https://calendly.com/techtuality-info/30min" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">AI Solutions</a></li>
+                        <li><a href="services.html">Process Automation</a></li>
+                        <li><a href="services.html">Technical Training</a></li>
+                        <li><a href="services.html">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> info@techtuality.xyz</li>
+                        <li><i class="fas fa-phone"></i> +1 (510) 501-1990</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco Bay Area</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Techtuality Global</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
