@@ -19,3 +19,93 @@ function adjustHeroText() {
 // Run on load and resize
 window.addEventListener('load', adjustHeroText);
 window.addEventListener('resize', adjustHeroText);
+
+// Smooth Page Transitions (JS Only)
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation configuration
+    const config = {
+        fadeDuration: 0,
+        staggerDelay: 0,
+        blockAnimation: true
+    };
+
+    // Initialize page with fade-in
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = `opacity ${config.fadeDuration}ms ease`;
+        document.body.style.opacity = '1';
+        animateBlocks();
+    }, 100);
+
+    // Handle internal navigation
+    document.querySelectorAll('a').forEach(link => {
+        if (shouldAnimateLink(link)) {
+            link.addEventListener('click', handleLinkClick);
+        }
+    });
+
+    // Handle back/forward navigation
+    window.addEventListener('pageshow', () => {
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+            animateBlocks();
+        }, 50);
+    });
+
+    // Animation functions
+    function shouldAnimateLink(link) {
+        return !link.target && 
+               !link.href.includes('#') && 
+               (link.href.includes(window.location.origin) || 
+                link.href.startsWith('/') || 
+                link.href.startsWith('./'));
+    }
+
+    function handleLinkClick(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        
+        // Fade out current page
+        document.body.style.opacity = '0';
+        
+        // Navigate after fade out
+        setTimeout(() => {
+            window.location.href = href;
+        }, config.fadeDuration);
+    }
+
+    function animateBlocks() {
+        if (!config.blockAnimation) return;
+        
+        const blocks = document.querySelectorAll('.about-card, .service-card, .feature-card, .stats-item');
+        
+        blocks.forEach((block, index) => {
+            block.style.opacity = '0';
+            block.style.transform = 'translateY(20px)';
+            block.style.transition = `all 0.4s ease ${index * config.staggerDelay}ms`;
+            
+            setTimeout(() => {
+                block.style.opacity = '1';
+                block.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    }
+
+    // Re-run block animation when elements come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.4s ease';
+        observer.observe(el);
+    });
+});
