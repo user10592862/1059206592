@@ -198,10 +198,10 @@ img {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: calc(100% - 40px); /* Add side margins */
-    max-width: 1300px; /* Maximum width */
+    max-width: 1220px; /* Maximum width */
     left: 50%;
     transform: translateX(-50%);
-    top: 18px; /* Small top margin */
+    top: 22px; /* Small top margin */
     z-index: 1000;
     padding: 0 10px;
     transition: all 0.3s ease;
