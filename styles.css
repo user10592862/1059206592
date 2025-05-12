@@ -2137,7 +2137,7 @@ body {
 @media (max-width: 576px) {
     .header {
         width: calc(100% - 20px);
-        top: 10px;
+        top: 20px;
         padding: 0 10px;
         height: 70px;
     }
@@ -2154,3 +2154,790 @@ body {
         height: 40px;
     }
 }
+
+/* Sponsors Page Styles */
+.sponsors-section {
+    padding: 100px 0;
+    background-color: #f8fafc;
+}
+
+.sponsors-year-container {
+    margin-bottom: 60px;
+}
+
+.sponsors-year-title {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Horizontal Sponsors Grid */
+.sponsors-horizontal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.sponsor-tier-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsor-tier-column .sponsor-card,
+.sponsor-tier-column .coming-soon {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.sponsors-tier-title {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.platinum-tier .sponsors-tier-title {
+    background: rgba(229, 228, 226, 0.3);
+    color: #333;
+}
+
+.gold-tier .sponsors-tier-title {
+    background: rgba(255, 215, 0, 0.3);
+    color: #333;
+}
+
+.silver-tier .sponsors-tier-title {
+    background: rgba(192, 192, 192, 0.3);
+    color: #333;
+}
+
+.sponsor-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-logo {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    min-height: 200px;
+}
+
+.sponsor-logo img {
+    max-width: 80%;
+    max-height: 140px;
+    object-fit: contain;
+}
+
+.sponsor-info {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.sponsor-info h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.sponsor-contribution {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.coming-soon {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+}
+
+/* Tier Cards */
+.tiers-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tier-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid var(--gray-color);
+}
+
+.tier-card:hover {
+    transform: translateY(-10px);
+}
+
+.tier-card.platinum {
+    border-top-color: #e5e4e2; /* Platinum color */
+}
+
+.tier-card.gold {
+    border-top-color: #ffd700; /* Gold color */
+}
+
+.tier-card.silver {
+    border-top-color: #c0c0c0; /* Silver color */
+}
+
+.tier-header {
+    padding: 30px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.tier-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.tier-price {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tier-benefits {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.tier-benefits ul {
+    margin-bottom: 30px;
+}
+
+.tier-benefits li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: var(--dark-color);
+}
+
+.tier-benefits i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.tier-card .btn {
+    margin: 0 30px 30px;
+    width: calc(100% - 60px);
+}
+
+.custom-sponsorship {
+    background: #f0f9ff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.custom-sponsorship h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.custom-sponsorship p {
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Tier-specific styles */
+.platinum-tier .sponsor-card {
+    border: 2px solid #e5e4e2;
+}
+
+.gold-tier .sponsor-card {
+    border: 2px solid #ffd700;
+}
+
+.silver-tier .sponsor-card {
+    border: 2px solid #c0c0c0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .sponsors-horizontal-grid {
+        flex-direction: column;
+    }
+    
+    .sponsor-tier-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tiers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo {
+        min-height: 150px;
+    }
+}
+
+/* Platinum Sponsors Grid */
+.platinum-sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid #e5e4e2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sponsor-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo-card:hover {
+    transform: scale(1.05);
+}
+
+.sponsor-logo-card img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Responsive adjustments for platinum sponsors */
+@media (max-width: 768px) {
+    .platinum-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo-card {
+        padding: 15px;
+    }
+    
+    .sponsor-logo-card img {
+        max-height: 60px;
+    }
+}
+
+/* Silver Sponsors Grid */
+.silver-sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #c0c0c0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Gold Sponsors Grid */
+.gold-sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .sponsors-horizontal-grid {
+        flex-direction: column;
+    }
+    
+    .sponsor-tier-column {
+        width: 100%;
+    }
+    
+    .silver-sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gold-sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .silver-sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gold-sponsors-grid,
+    .platinum-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo-card {
+        height: 120px;
+    }
+    
+    .sponsor-logo-card img {
+        max-height: 60px;
+    }
+}
+
+/* Sponsors Section - Equal Size Boxes */
+.sponsors-section {
+    padding: 100px 0;
+    background-color: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Grid Container */
+.sponsors-horizontal-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: stretch; /* Make all columns same height */
+}
+
+/* Equal Width Columns */
+.sponsor-tier-column {
+    flex: 1;
+    min-width: 0; /* Allows columns to shrink properly */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tier Title Styling */
+.sponsors-tier-title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Common Sponsor Grid Styles */
+.platinum-sponsors-grid,
+.gold-sponsors-grid,
+.silver-sponsors-grid {
+    flex: 1; /* Takes remaining space */
+    display: grid;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Fill column height */
+    min-height: 400px; /* Equal minimum height */
+}
+
+/* Individual Tier Styling */
+/* Platinum */
+.platinum-sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    border: 2px solid #7dbcea;
+    background-color: #f0f9ff;
+}
+
+.platinum-tier .sponsors-tier-title {
+    background: rgba(125, 188, 234, 0.2);
+    color: #1e6fa8;
+}
+
+/* Gold */
+.gold-sponsors-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    border: 2px solid #ffd700;
+    justify-items: center; /* Center the two gold sponsors */
+}
+
+.gold-sponsors-grid .sponsor-logo-card {
+    max-width: 80%; /* Control width of gold logos */
+}
+
+.gold-tier .sponsors-tier-title {
+    background: rgba(255, 215, 0, 0.2);
+    color: #b8860b;
+}
+
+/* Silver */
+.silver-sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border: 2px solid #c0c0c0;
+}
+
+.silver-tier .sponsors-tier-title {
+    background: rgba(192, 192, 192, 0.2);
+    color: #6d6d6d;
+}
+
+/* Sponsor Logo Cards */
+.sponsor-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.sponsor-logo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-logo-card img {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Make gold sponsor logos slightly larger */
+.gold-sponsors-grid .sponsor-logo-card img {
+    max-height: 100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .sponsors-horizontal-grid {
+        flex-wrap: wrap;
+    }
+    
+    .sponsor-tier-column {
+        flex: 1 1 calc(50% - 15px);
+        min-width: 300px;
+    }
+    
+    .platinum-sponsors-grid,
+    .silver-sponsors-grid {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-tier-column {
+        flex: 1 1 100%;
+    }
+    
+    .platinum-sponsors-grid,
+    .gold-sponsors-grid,
+    .silver-sponsors-grid {
+        min-height: 300px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gold-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo-card img {
+        max-height: 70px;
+    }
+    
+    .gold-sponsors-grid .sponsor-logo-card img {
+        max-height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .platinum-sponsors-grid,
+    .silver-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo-card {
+        padding: 15px;
+    }
+}
+
+/* Mobile First Sponsors Section */
+@media (max-width: 767px) {
+    .sponsors-section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    /* Stack sponsor tiers vertically */
+    .sponsors-horizontal-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .sponsor-tier-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Adjust grid layouts for mobile */
+    .silver-sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .gold-sponsors-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+        min-height: auto;
+    }
+    
+    .platinum-sponsors-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+        min-height: auto;
+    }
+    
+    /* Sponsor logo cards mobile adjustments */
+    .sponsor-logo-card {
+        padding: 15px;
+        min-height: 100px;
+    }
+    
+    .sponsor-logo-card img {
+        max-height: 60px;
+    }
+    
+    /* Gold sponsors slightly larger on mobile */
+    .gold-sponsors-grid .sponsor-logo-card img {
+        max-height: 70px;
+    }
+    
+    /* Tier title adjustments */
+    .sponsors-tier-title {
+        font-size: 1.3rem;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    /* Remove empty paragraph space */
+    .section-header p {
+        display: none;
+    }
+}
+
+/* Small mobile devices (e.g. iPhone SE) */
+@media (max-width: 374px) {
+    .silver-sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sponsor-logo-card {
+        min-height: 80px;
+    }
+    
+    .sponsor-logo-card img {
+        max-height: 50px;
+    }
+    
+    .gold-sponsors-grid .sponsor-logo-card img {
+        max-height: 60px;
+    }
+}
+
+/* Mobile Responsive Sponsors Section */
+@media (max-width: 767px) {
+    /* Change main title to just "Sponsors" on mobile */
+    .sponsors-section .section-header h2 {
+        font-size: 2rem;
+        content: "Sponsors";
+    }
+    .sponsors-section .section-header h2::after {
+        content: "Sponsors" !important;
+        visibility: hidden;
+        display: none;
+    }
+
+    /* Fix alignment and overflow issues */
+    .sponsors-year-container {
+        padding: 0 15px;
+    }
+
+    .sponsors-horizontal-grid {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sponsor-tier-column {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    /* Fix tier title alignment */
+    .sponsors-tier-title {
+        text-align: center;
+        padding: 12px 0;
+        margin: 0 0 15px 0;
+        width: 70%;
+    }
+
+    /* Fix grid alignment */
+    .silver-sponsors-grid,
+    .gold-sponsors-grid,
+    .platinum-sponsors-grid {
+        width: 70%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Adjust silver sponsors grid */
+    .silver-sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Adjust gold sponsors grid */
+    .gold-sponsors-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Adjust platinum sponsors grid */
+    .platinum-sponsors-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Logo card adjustments */
+    .sponsor-logo-card {
+        padding: 12px;
+        margin: 0;
+    }
+
+    .sponsor-logo-card img {
+        max-width: 90%;
+        max-height: 50px;
+    }
+
+    /* Special case for very small screens */
+    @media (max-width: 374px) {
+        .silver-sponsors-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .sponsor-logo-card {
+            padding: 10px;
+        }
+        
+        .sponsor-logo-card img {
+            max-height: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide the sponsors title on mobile */
+    .sponsors-section .section-header {
+      display: none !important;
+    }
+    
+    /* Adjust spacing since title is gone */
+    .sponsors-year-container {
+      margin-top: -20px !important; /* Pull content up */
+      padding-top: 0 !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Hide the sponsors title on mobile */
+    .sponsors-section .section-header {
+      display: none !important;
+    }
+    
+    /* Add padding above Silver Sponsors */
+    .silver-tier {
+      padding-top: 80px !important; /* Adjust this value as needed */
+    }
+    
+    /* Optional: Adjust spacing between tiers */
+    .sponsor-tier-column {
+      margin-bottom: 20px !important;
+    }
+  }
